@@ -1,0 +1,84 @@
+@import '../../colors.module.css';
+
+
+.cont{
+    display: flex;
+    flex-direction: row;
+}
+.contenedor{
+    /* background-color: rgb(114, 176, 114);
+    border: 2px solid green;
+    border: 2px solid rgb(228, 116, 12); */
+    
+}
+.contenedor1 {
+    width: 20rem;
+    background-color: var(--color20);
+}
+.contenedor2 {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    /* background-color: var(--color20); */
+    margin-left: 1rem;
+    justify-content: space-between;
+}
+img{
+    /* border-radius: 10%; */
+    width: 100%;
+    height: auto;
+}
+.contenedor h3{
+    /* background-color: yellow; */
+    margin-top: 0.3rem;
+}
+.contenedor h4{
+    margin-top: -1rem;
+    /* background-color: rgb(68, 224, 94); */
+}
+
+.activity {
+    background-color: var(--color20);
+    display: grid;
+    grid-template-columns: 10rem;
+    /* gap: 1rem; */
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    /* margin-top: 1rem; */
+}
+.activity h4 {
+    margin-top: 0;
+}
+
+
+/* --------------------------------------- */
+
+.card {
+    width: 210px;
+    height: 284px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+   }
+   
+   .card2 {
+    width: 210px;
+    height: 284px;
+    background-color: #1a1a1a;
+    border-radius:;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   }
+   .card:hover img {
+    border-top-left-radius: 20px; /* Cambia el radio del borde superior izquierdo al hacer hover */
+  border-top-right-radius: 20px
+   }

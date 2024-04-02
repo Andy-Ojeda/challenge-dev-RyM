@@ -1,0 +1,22 @@
+.contenedor{
+    /* background-color: rgb(197, 118, 118);
+    border: 2px solid red; */
+}
+
+.selectOrder {
+    width: 100%;
+        background-color: var(--color4);
+        height: 28px;
+        /* padding: 20px; */
+        
+        border-radius: 5px;
+}
+
+.selectOrder:focus {
+    /* color: var(--color3);  */
+    background-color: var(--color4);
+    outline-color: var(--color3); /* rgb(0, 255, 255);*/
+    box-shadow: -3px 0px 7px var(--color3);
+    transition: .1s;
+    transition-property: box-shadow;
+  }

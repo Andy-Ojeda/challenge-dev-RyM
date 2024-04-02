@@ -1,0 +1,67 @@
+@import '../../colors.module.css';
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* background-color: rgb(171, 171, 94);
+    border: 2px solid yellow; */
+    gap: 0.3rem;
+}
+/* .labelContinent{
+    background-color: rgb(226, 99, 99);
+} */
+.contSearch{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    gap: 0.1rem;
+}
+
+.selectCountry {
+    background-color: var(--color4);
+    /* max-width: 190px; */
+    height: 25px;
+    /* padding: 10px; */
+    /* text-align: center; */
+    /* border: 2px solid var(--color2);  */
+    border-radius: 5px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+/* ---------------------------------------------------------- */
+
+
+.input {
+    background-color: var(--color4);
+    /* max-width: 190px; */
+    height: 5px;
+    padding: 10px;
+    /* text-align: center; */
+    /* border: 2px solid var(--color2);  */
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+  .input:focus {
+    color: var(--color1); /*rgb(0, 255, 255); */
+    background-color: var(--color4);
+    outline-color: var(--color3); /* rgb(0, 255, 255);*/
+    box-shadow: -3px 0px 7px var(--color3);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+  .selectCountry:focus {
+    /* color: var(--color3);  */
+    background-color: var(--color4);
+    outline-color: var(--color3); /* rgb(0, 255, 255);*/
+    box-shadow: -3px 0px 7px var(--color3);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+
+
+
+
+/* ------------------------------------------------------------- */

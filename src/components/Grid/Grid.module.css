@@ -1,0 +1,45 @@
+@import '../../colors.module.css';
+
+.grid{
+    display: grid;
+    /* background-color: brown; */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    gap: 0.5em;
+    justify-content: center;
+    /* width: 100%; */
+}
+.contButtons{
+    display: grid;
+    grid-template-columns: 1.2fr 0.6fr 1.2fr;
+    gap: 0.5em;
+    
+    /* border: 1px solid black; */
+}
+.cantidadPages {
+    margin-top: 1.5rem;
+    color: var(--color4);
+    
+}
+
+.contButtons button{
+    background-color: orange;
+    margin: 1em;
+}
+.centeredCard {
+    /* border: 3px solid black; */
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+
+    height: 100%;
+  }
+
+.cardShow {
+    /* border: 2px solid rgb(25, 0, 255); */
+    margin-left: 0.5em;
+    /* background-color: red; */
+}

@@ -1,0 +1,130 @@
+@import '../../colors.module.css';
+
+
+.contenedor {
+    /* background-color: #004FB3; */
+    margin-top: -1.7rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: var(--color2);
+    /* background-color: #176B87; */
+    /* border: 6px solid rgb(255, 180, 4); */
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+.buttonLogo{
+    background-color: transparent;
+}
+.logo{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contiene{
+    /* background-color: #cacdce;
+    border: 3px solid black; */
+    display: grid;
+    grid-template-rows: 2.5fr 0.5fr;
+}
+.contButtons{
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0.4rem;
+}
+
+
+
+.contTitulo{
+    /* margin-left: -20rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.titulo{
+    font-size: 4.5rem;
+    /* font-weight: bold; */
+    text-shadow: 8px 6px 6px var(--color1);
+    padding-top: 0rem;
+    color: var(--color3);
+    /* background-color: white; */
+}
+.image{
+    width: 9rem;
+    /* margin: -1rem -1.5rem ; */
+    transition: all 0.4s ;
+    animation: rotate 50s linear infinite; /* Nombre de la animación, duración, temporización y repetición */
+  
+}
+.image:hover {
+    /* color: #053B50; */
+    scale: 1.2;
+    /* box-shadow: 0 0px 20px #053b50a8); */
+    transition: all 0.4s ;
+  }
+
+/* ------------------------------------------------ */
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 16px;
+    color: #EEEEEE;
+    border: 2px solid #EEEEEE;
+    
+    /* color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98); */
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    /* background-color: rgb(193, 163, 98); */
+    background-color: #EEEEEE;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #053B50;
+    scale: 1.1;
+    box-shadow: 0 0px 20px #053b50a8);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+  
+  /* ------------------------------------------------------------- */
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Rotación inicial (0 grados) */
+    }
+    100% {
+      transform: rotate(360deg); /* Rotación completa (360 grados) */
+    }
+  }
+  
+  /* Aplicar la animación a la etiqueta img */
+  
+  
+  
