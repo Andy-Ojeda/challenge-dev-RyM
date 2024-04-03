@@ -18,49 +18,49 @@ function Grid({}) {
     const cardsxPage = 10      //!  NUEVO!!
     const [page, setPage] = useState(1);
     const [pageTotal, setpageTotal] = useState(1);
-    const [tenCountries, setTenCountries] = useState([]);    
-    const [allCountries, setAllCountries] = useState([]);
+    const [tenCharacters, setTenCharacters] = useState([]);    
+    const [allCharacters, setAllCharacters] = useState([]);
     
 
 
-    // useEffect(()=>{
-    //     setAllCountries(show);
-    //     setPage(1)
-    //     show.length===1 ? setpageTotal(1) : setpageTotal(Math.ceil(show.length / cardsxPage));
-    // },[show])
+    useEffect(()=>{
+        setAllCharacters(show);
+        setPage(1)
+        show.length===1 ? setpageTotal(1) : setpageTotal(Math.ceil(show.length / cardsxPage));
+    },[show])
 
 
-    // useEffect(()=>{
-    //     const startId = (page - 1) * cardsxPage;    // 0  11  21  31
-    //     const endId = startId + cardsxPage;         // 10 20  30  40
-    //     let displayCountries = show;
+    useEffect(()=>{
+        const startId = (page - 1) * cardsxPage;    // 0  11  21  31
+        const endId = startId + cardsxPage;         // 10 20  30  40
+        let displayCountries = show;
 
-    //     console.log('Grid - ORDER VALUE: ', order.value)
+        console.log('Grid - ORDER VALUE: ', order.value)
         
 
-    //     if (order.value === 'order') {
-    //         console.log('SHOW', show[0].name);
-    //         console.log('NATIVE', nativeDB[0].name)
-    //         displayCountries = nativeDB;
-    //     }
-    //     else if (order.value === 'descendente') {
-    //         displayCountries = displayCountries.sort((a,b)=> b.name.localeCompare(a.name));
-    //     }
-    //     else if (order.value === 'ascendente') {
-    //         displayCountries = displayCountries.sort((a,b)=> a.name.localeCompare(b.name));
-    //     }
-    //     else if (order.value === 'poblacion_asc') {
-    //         displayCountries = displayCountries.sort((a, b) => a.population - b.population);
-    //     } 
-    //     else if (order.value === 'poblacion_desc') {
-    //         displayCountries = displayCountries.sort((a, b) => b.population - a.population);
-    //     }
+        if (order.value === 'order') {
+            console.log('SHOW', show[0].name);
+            console.log('NATIVE', nativeDB[0].name)
+            displayCountries = nativeDB;
+        }
+        else if (order.value === 'descendente') {
+            displayCountries = displayCountries.sort((a,b)=> b.name.localeCompare(a.name));
+        }
+        else if (order.value === 'ascendente') {
+            displayCountries = displayCountries.sort((a,b)=> a.name.localeCompare(b.name));
+        }
+        else if (order.value === 'poblacion_asc') {
+            displayCountries = displayCountries.sort((a, b) => a.population - b.population);
+        } 
+        else if (order.value === 'poblacion_desc') {
+            displayCountries = displayCountries.sort((a, b) => b.population - a.population);
+        }
         
-    //     displayCountries = displayCountries.slice(startId, endId);
+        displayCountries = displayCountries.slice(startId, endId);
         
-    //     setTenCountries(displayCountries);
+        setTenCharacters(displayCountries);
 
-    // },[allCountries, page, order])
+    },[allCharacters, page, order])
 
 
     const handleButton = (event) =>{
@@ -80,31 +80,31 @@ function Grid({}) {
         <div className={style.contButtons}>
             <button name='izq' onClick={handleButton} disabled={page===1} >⏪IZQ</button>
             <label className={style.cantidadPages}>Página {page} de {pageTotal}</label>
-            <button name='der' onClick={handleButton} disabled={page===Math.ceil(allCountries.length / cardsxPage)} >DER⏩</button>
+            <button name='der' onClick={handleButton} disabled={page===Math.ceil(allCharacters.length / cardsxPage)} >DER⏩</button>
         </div>
         <div className={style.contGrid}>
             
-            {/* {       //* Si la cantidad de cartas a mostrar es 1, cambio el className
-                tenCountries.length > 0 && tenCountries.length < 5 ? (
+            {       //* Si la cantidad de cartas a mostrar es 1, cambio el className
+                tenCharacters.length > 0 && tenCharacters.length < 5 ? (
                     <div className={style.centeredCard}>
-                        {tenCountries.map((tenC) => (
+                        {tenCharacters.map((tenC) => (
                             <div className={style.cardShow}>
-                                <Card key={tenC.idPais} country={tenC} />
+                                <Card key={tenC.id} character={tenC} />
                             </div>
                         ))}
                     </div>
                 ) : ""
-            } */}
-            {/* {
-                tenCountries.length > 4 ? (
+            }
+            {
+                tenCharacters.length > 4 ? (
                     <div className={style.grid}>
-                        {tenCountries.map((tenC) => (
-                            <Card key={tenC.idPais} country={tenC} className={style.cardShow2} />
+                        {tenCharacters.map((tenC) => (
+                            <Card key={tenC.id} character={tenC} className={style.cardShow2} />
                         ))}
                     </div>
                 ) : ''
             }
-                         */}
+                        
         </div>
     
     </div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import style from './Nav.module.css';
 import { Link } from 'react-router-dom';
-import image from '../../assets/rymLOGO.png';
+import image from '../../assets/rymLOGO2.png';
+import tituloRyM from '../../assets/tituloRyM.png'
 
 function Nav() {
 
@@ -10,16 +11,17 @@ function Nav() {
     <div className={style.contenedor}>
           
           <div className={style.logo}>
-            <Link to={'/countries'}>
+            {/* <Link to={'/countries'}> */}
               {/* <button className={style.buttonLogo}> */}
                       <img className={style.image} src={image} alt="Logo"/>
               {/* </button> */}
-            </Link>
+            {/* </Link> */}
           </div>
           
           <div className={style.contiene}>
               <div className={style.contTitulo}>
-                  <label className={style.titulo}>Countries App</label>
+                  {/* <label className={style.titulo}>Rick & Morty</label> */}
+                    <img src={tituloRyM} alt="Rick and Morty" />
               </div>    
               <div className={style.contButtons}>
                   {/* <Link to={'/countries'}>

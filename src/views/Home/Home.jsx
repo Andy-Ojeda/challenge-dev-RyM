@@ -42,20 +42,17 @@ function Home() {
 
     return (
     <div className={style.contenedor}>
-            <div>
+            <div className={style.contNav}>
               <Nav />
             </div>
             <div className={style.contSelects}>
-                <div className={style.searchBar}>
+                <div className={style.contSearchBar}>
                     <Searchbar />
                 </div>
-                <div className={style.contOrder}>
-                    <Order />
-                </div>
+
                 <div className={style.contFilter}>
                     <Filter />
                 </div>
-                
             </div>
                 
             <div className={style.contGrid}>

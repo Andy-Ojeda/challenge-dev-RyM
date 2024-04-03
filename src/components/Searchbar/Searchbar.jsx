@@ -80,95 +80,35 @@ function Searchbar() {
     <div className={style.contenedor}>
         
         <div className={style.contSearch}>
-          <input type='text' value={textBox}  className={style.input} pattern="\d+" placeholder='Search by Name' onChange={(e)=>setTextBox(e.target.value)} />  {/* // Con handleChange incorporado ;) */}
-          <input type="button" value="Search" className={style.button} name='Search' onClick={handleButton} />
-          <input type="button" value="All / Reset" className={style.button} name='All' onClick={handleButton} />
+            <div className={style.contInput}>
+                <input type='text' value={textBox}  className={style.input} pattern="\d+" placeholder='Search by Name' onChange={(e)=>setTextBox(e.target.value)} />  {/* // Con handleChange incorporado ;) */}
+                <input type="button" value="Search" className={style.button} name='Search' onClick={handleButton} />
+            </div>
+            <div className={style.contSelect}>
+                <label>All Names...</label>
+                <div>
+                    <select className={style.selectCountry} name="selectCharacter" defaultValue="character" onChange={handleSelect}>
+                        <option value="character">Select your Character...</option>
+
+
+                        <optgroup className={style.labelContinent} label="Names...">
+                        {
+                            axiosDB.length > 0 ? (
+                            axiosDB
+                                .map((e, id) => (
+                                <option key={e.id} value={e.id}>{e.name}</option>))
+                            )
+                            : (
+                                <option value='cargando'>cargando...</option>  
+                            )
+                        }
+                        </optgroup>
+                        
+                    </select>
+                </div>
+            </div>
         </div>
-
-        <select className={style.selectCountry} name="selectCharacter" defaultValue="character" onChange={handleSelect}>
-            <option value="character">Select your Character...</option>
-
-
-             <optgroup className={style.labelContinent} label="Page 1">
-              {
-                axiosDB.length > 0 ? (
-                  axiosDB
-                    .map((e, id) => (
-                      <option key={e.id} value={e.id}>{e.name}</option>))
-                )
-                : (
-                    <option value='cargando'>cargando...</option>  
-                  )
-              }
-            </optgroup>
-            {/*<optgroup label="NORTH AMERICA">
-              {
-                axiosDB.length > 0 ? (
-                  axiosDB
-                    .filter((e) => e.continent === 'North America')
-                    .map((e) => (
-                      <option key={e.idPais} value={e.idPais}>{e.name}</option>))
-                )
-                : (
-                    <option value='cargando'>cargando...</option>  
-                  )
-              }
-            </optgroup>
-            <optgroup label="SOUTH AMERICA">
-              {
-                axiosDB.length > 0 ? (
-                  axiosDB
-                    .filter((e) => e.continent === 'South America')
-                    .map((e) => (
-                      <option key={e.idPais} value={e.idPais}>{e.name}</option>))
-                )
-                : (
-                    <option value='cargando'>cargando...</option>  
-                  )
-              }
-            </optgroup>
-            <optgroup label="EUROPE">
-              {
-                axiosDB.length > 0 ? (
-                  axiosDB
-                    .filter((e) => e.continent === 'Europe')
-                    .map((e) => (
-                      <option key={e.idPais} value={e.idPais}>{e.name}</option>))
-                )
-                : (
-                    <option value='cargando'>cargando...</option>  
-                  )
-              }
-            </optgroup>
-            <optgroup label="AFRICA">
-              {
-                axiosDB.length > 0 ? (
-                  axiosDB
-                    .filter((e) => e.continent === 'Africa')
-                    .map((e) => (
-                      <option key={e.idPais} value={e.idPais}>{e.name}</option>))
-                )
-                : (
-                    <option value='cargando'>cargando...</option>  
-                  )
-              }
-            </optgroup>
-            <optgroup label="OCEANIA">
-              {
-                axiosDB.length > 0 ? (
-                  axiosDB
-                    .filter((e) => e.continent === 'Oceania')
-                    .map((e) => (
-                      <option key={e.idPais} value={e.idPais}>{e.name}</option>))
-                )
-                : (
-                    <option value='cargando'>cargando...</option>  
-                  )
-              }
-            </optgroup>
-             */}
-        </select>
-    
+          <input type="button" value="All / Reset" className={style.button} name='All' onClick={handleButton} />
     </div>
   )
 }
