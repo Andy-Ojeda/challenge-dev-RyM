@@ -7,7 +7,7 @@ import style from './Home.module.css';
 import { useEffect, useState } from 'react';
 // import { useParams } from 'react-router-dom';
 
-import {useDispatch, useSelector} from 'react-redux';   //? useSelector es para mostrar mi estadoGlobal
+import {useDispatch, useSelector} from 'react-redux';  
 import {search_all} from '../../redux/actions/actions.js';
 
 
