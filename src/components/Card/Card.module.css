@@ -15,7 +15,9 @@
 }
 .contenedor1 {
     width: 20rem;
-    background-color: var(--color20);
+    background-color: rgb(13, 230, 42);
+    /* background-color: var(--color20); */
+    margin-top: 0.5rem;
 }
 .contenedor2 {
     display: flex;

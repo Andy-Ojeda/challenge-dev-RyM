@@ -85,7 +85,7 @@ function Grid({}) {
 
     return (
     <div>
-        <h3 style={{ color: "white" }}>{idOk}</h3>
+        {/* <h3 style={{ color: "white" }}>Valor id: {idOk}</h3> */}
         {
             idOk<1&&(
                 <div className={style.contButtons}>
