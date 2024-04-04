@@ -190,7 +190,7 @@ function Searchbar() {
 
         <div className={style.contFilter}>
             <div className={style.contSelect2}>
-                <label>Status:</label>
+                <label className={style.label001}>Status:</label>
                 <select className={style.selectSSG} value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
                     <option value="status">Select the status...</option>
                     <optgroup className={style.labelContinent} label="Status...">
@@ -211,7 +211,7 @@ function Searchbar() {
             </div>
                         
             <div className={style.contSelect2}>
-                <label>Species:</label>
+                <label className={style.label001}>Species:</label>
                 <select className={style.selectSSG} value={speciesFilter} onChange={e => setSpeciesFilter(e.target.value)}>
                     <option value="species">Select species...</option>
                     <optgroup className={style.labelContinent} label="Species...">
@@ -231,7 +231,7 @@ function Searchbar() {
             </div>
             
             <div className={style.contSelect2}>
-                <label>Gender:</label>
+                <label className={style.label001}>Gender:</label>
                 <select className={style.selectSSG} value={genderFilter} onChange={e => setGenderFilter(e.target.value)}>
                     <option value="gender">Select gender...</option>
                     <optgroup className={style.labelContinent} label="Gender...">

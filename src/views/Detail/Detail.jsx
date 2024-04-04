@@ -31,9 +31,9 @@ function Detail() {
             <Searchbar />
         </div> */}
 
-        <div className={style.contFilter}>
+        {/* <div className={style.contFilter}>
             <Filter />
-        </div>
+        </div> */}
     </div>
         
     <div className={style.contGrid}>

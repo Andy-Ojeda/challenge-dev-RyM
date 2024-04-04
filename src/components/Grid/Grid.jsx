@@ -17,11 +17,14 @@ function Grid({}) {
     const [pageTotal, setpageTotal] = useState(1);
     const [tenCharacters, setTenCharacters] = useState([]);    
     const [allCharacters, setAllCharacters] = useState([]);
+    const [idOk, setIdOk] = useState(0);
     
     const {id} = useParams();
+
     
    
     useEffect(()=>{
+        setIdOk(id);
         setAllCharacters(show);
         setPage(1)
         show.length===1 ? setpageTotal(1) : setpageTotal(Math.ceil(show.length / cardsxPage));
@@ -75,15 +78,26 @@ function Grid({}) {
         }
     }
   
+    const cardPush = ()=>{
+
+    }
+
+
     return (
     <div>
-        <div className={style.contButtons}>
-            <button name='izq' onClick={handleButton} disabled={page===1} >⏪IZQ</button>
-            <div className={style.contButLabel}>
-                <label className={style.cantidadPages}>Página {page} de {pageTotal}</label>
-            </div>
-            <button name='der' onClick={handleButton} disabled={page===Math.ceil(allCharacters.length / cardsxPage)} >DER⏩</button>
-        </div>
+        <h3 style={{ color: "white" }}>{idOk}</h3>
+        {
+            idOk<1&&(
+                <div className={style.contButtons}>
+                    <button name='izq' onClick={handleButton} disabled={page===1} >⏪IZQ</button>
+                    <div className={style.contButLabel}>
+                        <label className={style.cantidadPages}>Página {page} de {pageTotal}</label>
+                    </div>
+                    <button name='der' onClick={handleButton} disabled={page===Math.ceil(allCharacters.length / cardsxPage)} >DER⏩</button>
+                </div>
+            )
+        }
+
         <div className={style.contGrid}>
             
             {       //* Si la cantidad de cartas a mostrar es 1, cambio el className
