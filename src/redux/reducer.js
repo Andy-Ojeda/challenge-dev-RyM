@@ -17,6 +17,7 @@ const reducer = (state = initialState, action) =>{
 
         case SEARCH_ALL:     //? Si alguien me manda un type: SEARCHALL...
         // myCountries = action.payload
+            console.log('Buscando todo (all)!!')
             return {...state, show: action.payload}; //? ...guardo en el estado Global
         
         case SEARCH:

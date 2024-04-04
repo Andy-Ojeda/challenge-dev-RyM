@@ -18,14 +18,15 @@ export const inicioApp = (value) =>{
 
 export const filter = (value) =>{
     return async (dispatch) => {
-        // console.log('Esto es un Filter', value);
+        console.log('---------------------------');
+        console.log('Esto es un Filter', value);
         try {
-            const {data} = await axios.get('http://localhost:3001/countries/home'); //? Traigo todo de mi DB
-            const countries = data.filter((country)=>{
-                return country.continent === value;
-            })
-            // console.log('COUNTRIES SON... ', countries[0])
-            return dispatch({type:FILTER, payload: countries}) 
+            // const {data} = await axios.get('http://localhost:3001/countries/home');
+            // const countries = data.filter((country)=>{
+            //     return country.continent === value;
+            // })
+            
+           return dispatch({type:FILTER, payload: value}) 
             
         } catch (error) {
             window.alert('Error en action - FILTER...', error.message);

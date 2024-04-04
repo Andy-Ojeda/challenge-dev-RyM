@@ -16,6 +16,20 @@
     
     /* border: 1px solid black; */
 }
+
+.contButLabel {
+    /* border: 2px solid black; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.contButLabel label {
+    margin-top: 0rem;
+    /* border: 2px solid red; */
+}
+
 .cantidadPages {
     margin-top: 1.5rem;
     color: var(--color4);

@@ -1,38 +1,86 @@
 @import '../../colors.module.css';
 
 .contenedor{
-    display: grid;
+    display: flex;
     /* grid-template-columns: 1fr 1fr 1fr; */
-    /* background-color: rgb(171, 171, 94);
-    border: 2px solid yellow; */
-    gap: 0.3rem;
+    /* background-color: rgb(171, 171, 94);*/
+    /* justify-content: space; */
+    flex-direction: column;
+    /* border: 2px solid yellow;  */
+    /* gap: 0.3rem; */
     width: 100%;
 }
 .contInput {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.contSelect {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+.contSelect label {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+.contSel {
+    margin-right: 0rem;
 }
 .contSearch{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 0.5fr;
     gap: 0.1rem;
+}
+.contReset {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
 }
 
 .selectCountry {
     background-color: var(--color4);
-    /* max-width: 190px; */
-    height: 25px;
-    /* padding: 10px; */
-    /* text-align: center; */
-    /* border: 2px solid var(--color2);  */
+    height: 28px;
     border-radius: 5px;
 }
 
+.contFilter {
+    /* border: 2px solid black; */
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: row;
+
+    /* grid: 0.2rem; */
+    /* justify-content: space-between; */
+}
+.contSelect2 {
+    /* border: 2px solid red; */
+    width: 33.3%;
+}
+.selectSSG {
+    width: 99%;
+    background-color: var(--color4);
+    height: 28px;
+    border-radius: 5px;
+}
+
+.button {
+    height: 100%;
+    margin-left: 0.2rem;
+}
 .button:hover {
     cursor: pointer;
 }
+.button2 {
+    height: 100%;
+    border-radius: 10%;
+}
+
+
 /* ---------------------------------------------------------- */
 
 
@@ -44,7 +92,7 @@
     /* text-align: center; */
     /* border: 2px solid var(--color2);  */
     border-radius: 5px;
-    width: 90%;
+    width: 100%;
     /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
   }
   

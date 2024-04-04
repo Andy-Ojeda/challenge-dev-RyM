@@ -11,37 +11,21 @@ function Nav() {
     <div className={style.contenedor}>
           
           <div className={style.logo}>
-            {/* <Link to={'/countries'}> */}
-              {/* <button className={style.buttonLogo}> */}
-                      <img className={style.image} src={image} alt="Logo"/>
-              {/* </button> */}
-            {/* </Link> */}
+            <img className={style.image} src={image} alt="Logo"/>
           </div>
           
           <div className={style.contiene}>
               <div className={style.contTitulo}>
-                  {/* <label className={style.titulo}>Rick & Morty</label> */}
-                    <img src={tituloRyM} alt="Rick and Morty" />
+                  <img src={tituloRyM} alt="Rick and Morty" />
               </div>    
               <div className={style.contButtons}>
-                  {/* <Link to={'/countries'}>
-                    <input type="button" value="INICIO" />
-                  </Link> */}
-                  
-                  <Link to={'/countries/home'}>
-                    {/* <div className={style.button}>
-                      <input type="button" value="HOME" />
-                    </div> */}
+                  <Link to={'/'}>
                     <button className={style.button}>HOME</button>
                   </Link>
-                  <Link to={'/countries/about'}>
-                    {/* <input type="button" value="ABOUT" /> */}
+                  {/* <Link to={'/about'}>
                     <button className={style.button}>ABOUT</button>
-                  </Link>
-                  <Link to={'/countries/form'}>
-                    {/* <input type="button" value="NEW Activity" /> */}
-                    <button className={style.button}>New Activity</button>
-                  </Link>
+                  </Link> */}
+                  
               </div>
           </div>  
           <div>
