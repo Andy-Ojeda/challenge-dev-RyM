@@ -42,12 +42,12 @@
     /* border: 2px solid yellow; */
 }
 .contNav {
-    background-color: #3d373c;
+    /* background-color: #3d373c; */
     /* border: 2px solid black; */
-    border-top-left-radius: 3rem;
+    /* border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
     border-bottom-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
+    border-bottom-right-radius: 3rem; */
     margin-top: 0.5rem;
     width: 95%;
 }
