@@ -85,6 +85,12 @@
 
 /* ---------------------------------------------------------- */
 
+.buttonSearch {
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 .input {
     background-color: var(--color4);
@@ -93,7 +99,9 @@
     padding: 10px;
     /* text-align: center; */
     /* border: 2px solid var(--color2);  */
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     width: 100%;
     /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
   }

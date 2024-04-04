@@ -18,6 +18,7 @@
     background-color: rgb(13, 230, 42);
     /* background-color: var(--color20); */
     margin-top: 0.5rem;
+    border: 2px solid white;
 }
 .contenedor2 {
     display: flex;

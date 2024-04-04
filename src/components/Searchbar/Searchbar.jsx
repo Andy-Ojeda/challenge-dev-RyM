@@ -3,14 +3,11 @@ import style from './Searchbar.module.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-// import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
-// import { search, search_all, reset_all } from '../../redux/actions/actions';
 
 import { filter, search_all } from '../../redux/actions/actions';
 
-
+import { BsSearch } from "react-icons/bs";
 
 
 
@@ -159,7 +156,10 @@ function Searchbar() {
         <div className={style.contSearch}>
             <div className={style.contInput}>
                 <input type='text' value={textBox}  className={style.input} pattern="\d+" placeholder='Search character by Name' onChange={(e)=>setTextBox(e.target.value)} />  
-                <input type="button" value="Search" className={style.button} name='Search' onClick={handleButton} />
+                <button className={style.buttonSearch} name='Search' onClick={handleButton} >
+                    Search<BsSearch />
+                </button>
+                {/* <input type="button" value="Search" className={style.button} name='Search' onClick={handleButton} /> */}
             </div>
             
             <div className={style.contSelect}>
