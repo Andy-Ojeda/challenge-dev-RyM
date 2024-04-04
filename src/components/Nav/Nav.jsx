@@ -22,9 +22,6 @@ function Nav() {
                   <Link to={'/'}>
                     <button className={style.button}>HOME</button>
                   </Link>
-                  {/* <Link to={'/about'}>
-                    <button className={style.button}>ABOUT</button>
-                  </Link> */}
                   
               </div>
           </div>  

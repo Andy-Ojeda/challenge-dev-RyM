@@ -6,6 +6,8 @@
     flex-direction: row;
 }
 .contenedor{
+    display: flex;
+    justify-content: center;
     /* background-color: rgb(114, 176, 114);
     border: 2px solid green;
     border: 2px solid rgb(228, 116, 12); */
@@ -31,9 +33,11 @@ img{
 .contenedor h3{
     /* background-color: yellow; */
     margin-top: 0.3rem;
+    color: #00ff75;
 }
 .contenedor h4{
     margin-top: -1rem;
+    color: #00ff75;
     /* background-color: rgb(68, 224, 94); */
 }
 
@@ -65,9 +69,12 @@ img{
    .card2 {
     width: 210px;
     height: 284px;
-    background-color: #1a1a1a;
-    border-radius:;
+    background-color: #353948;
+    /* border-radius:; */
     transition: all .2s;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
    }
    
    .card2:hover {

@@ -102,6 +102,7 @@ function Grid({}) {
                     <div className={style.grid}>
                         {tenCharacters.map((tenC) => (
                             <Card key={tenC.id} character={tenC} className={style.cardShow2} />
+                              
                         ))}
                     </div>
                 ) : ''

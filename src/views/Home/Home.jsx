@@ -1,4 +1,3 @@
-// import Order from '../../components/Order/Order.jsx';
 import Searchbar from '../../components/Searchbar/Searchbar.jsx';
 import Filter from '../../components/Filter/Filter.jsx';
 import Grid from '../../components/Grid/Grid.jsx';
@@ -9,35 +8,19 @@ import { useEffect, useState } from 'react';
 // import { useParams } from 'react-router-dom';
 
 import {useDispatch, useSelector} from 'react-redux';   //? useSelector es para mostrar mi estadoGlobal
-import { searchID, search_all, inicioApp } from '../../redux/actions/actions.js';
+import {search_all} from '../../redux/actions/actions.js';
 
 
 
 function Home() {
     const dispatch = useDispatch();
-    // const {id} = useParams();
+   
+    const show = useSelector((state)=>state.show); 
     
-    // useEffect(() => {
-    //     const fetchData = async () =>{
-    //         try {
-    //             await dispatch(searchID(id));
-    //         } catch (error) {
-    //             console.log('ERROR EN HOME ::', error);
-    //         }
-    //     }
-    //     if (id !== undefined) {
-    //         fetchData();
-    //     }
-    // }, [id, dispatch]);
-
-    
-    const show = useSelector((state)=>state.show); //! LO NUEVO !!!!!!!!!!!
-    
-    //*  Me guardo todos los países en mi estado global "myCountries"
     useEffect(()=> {
         dispatch(search_all()); 
-        console.log('Buscando todo!!')
-        // dispatch(inicioApp(show));
+        // console.log('Buscando todo!!')
+        
     }, [])
 
 

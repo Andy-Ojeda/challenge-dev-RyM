@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 // import { search, search_all, reset_all } from '../../redux/actions/actions';
 
-import { filter } from '../../redux/actions/actions';
+import { filter, search_all } from '../../redux/actions/actions';
 
 
 
@@ -67,9 +67,10 @@ function Searchbar() {
       
       switch (buttonName) {
         case 'All':
-            setCharacters(show);                //!-----------------------------------------------------
-            setFilteredCharacters(show);        //?-----------------------------------------------------
-            
+            // setCharacters(show);                //!-----------------------------------------------------
+            // setFilteredCharacters(show);        //?-----------------------------------------------------
+            dispatch(search_all());
+
             setSpeciesFilter('all');
             setGenderFilter('all');
             setStatusFilter('all');
