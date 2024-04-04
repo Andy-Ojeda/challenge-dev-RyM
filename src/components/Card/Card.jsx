@@ -19,12 +19,13 @@ function Card({character, activities}) {
             <div className={id? style.cont : style.cont1}>
                 <div className= {id ? style.contenedor1 : style.contenedor}>
                     
-                    <Link to={`/detail/${character.id}`}> 
+                    <Link to={`/detail/${character.id}`} className={style.linkStyle}> 
                         
                         <img src={character.image} alt="ImageCharacter" />
                         <h3>{character.name}</h3>
 
                         {id && <h4>Specie: {character.species}</h4>}
+                        {id && <h4>Origin: {character.origin.name}</h4>}
                         
                         <h4>{`Status: ${character.status}`}</h4>
                         

@@ -92,3 +92,7 @@ img{
     border-top-left-radius: 20px; /* Cambia el radio del borde superior izquierdo al hacer hover */
   border-top-right-radius: 20px
    }
+   .linkStyle {
+    text-decoration: none;
+    
+  }
